@@ -20,5 +20,5 @@ class Policy < ActiveRecord::Base
   validates :product_type, :inclusion => {:in => Product.all}
   validates :number, :uniqueness => true
 
-  scope :pending_renewal, lambda {where(:end => Date.today..2.months.from_now.to_date)}
+  scope :pending_renewal, lambda {where("end < ? AND end > ?",Date.today,2.months.from_now.to_date)}
 end
