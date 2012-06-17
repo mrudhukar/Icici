@@ -1,0 +1,26 @@
+<thead>
+  <tr>
+    <th>Product</th>
+    <th>Number</th>
+    <th>Insurer</th>
+    <th>Premium</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Intimation</th>
+    <th>Document</th>
+  </tr>
+</thead>
+<tbody>
+  <% @policies.each do |pol| %>
+    <tr>
+      <td><%= pol.product_type %></td>
+      <td><%= pol.number %></td>
+      <td><%= pol.insurer %></td>
+      <td><%= pol.premium %></td>
+      <td><%= pol.start.strftime("%b %d, %Y") %></td>
+      <td><%= pol.end.strftime("%b %d, %Y") %></td>
+      <td><%= pol.intimation_required? ? "Yes" : "No" %></td>
+      <td><%= link_to("View", "/policy.pdf", :target => "_blank") %></td>
+    </tr>
+  <% end %>
+</tbody>

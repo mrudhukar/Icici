@@ -11,6 +11,10 @@ Icici::Application.routes.draw do
     end
   end
   resources :user_sessions
+  resources :policies
+  resources :claims
+
+
   root :to => 'users#dashboard'
 
   # See how all your routes lay out with "rake routes"

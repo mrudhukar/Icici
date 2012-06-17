@@ -1,0 +1,21 @@
+<div class="">
+  <div class="well small merge-bottom">
+    <%= link_to("View all", policies_path, :class => "pull-right")%>
+    <h4 class="header">Policies up for renewal in two months</h4>
+  </div>
+
+  <table class="table table-striped table-bordered  attach-top">
+    <%= render :partial => "policies/policies"%>
+  </table>
+</div>
+
+<div class="">
+  <div class="well small merge-bottom">
+    <%= link_to("View all", claims_path, :class => "pull-right")%>
+    <h4 class="header">Pending claims for more than 6 months</h4>
+  </div>
+
+  <table class="table table-striped table-bordered attach-top">
+    <%= render :partial => "claims/claims"%>
+  </table>
+</div>

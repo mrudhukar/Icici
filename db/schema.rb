@@ -11,7 +11,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120616082414) do
+ActiveRecord::Schema.define(:version => 20120616153544) do
+
+  create_table "claims", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "policy_id"
+    t.string   "reference_number"
+    t.date     "loss_date"
+    t.string   "cause"
+    t.integer  "gross_amount"
+    t.string   "status"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "policies", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "product_type"
+    t.string   "number"
+    t.string   "insurer",             :default => "ICICI Lombard"
+    t.integer  "premium"
+    t.date     "start"
+    t.date     "end"
+    t.boolean  "intimation_required", :default => true
+    t.datetime "created_at",                                       :null => false
+    t.datetime "updated_at",                                       :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name",                               :null => false

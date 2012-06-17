@@ -32,9 +32,12 @@ class UsersController < ApplicationController
 
   def dashboard
     unless current_user
-      puts welcome_path() 
       redirect_to welcome_path() 
       return
     end
+
+    @policies = current_user.policies.pending_renewal.order("end")
+    @claims = current_user.claims.not_paid.where("loss_date < ?", 6.months.ago).order("loss_date")
+
   end
 end

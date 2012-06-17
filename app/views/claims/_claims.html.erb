@@ -1,0 +1,24 @@
+<thead>
+  <tr>
+    <th>Product</th>
+    <th>Number</th>
+    <th>Ref. Number</th>
+    <th>Loss Date</th>
+    <th>Cause of Loss</th>
+    <th>Gross Claim Amt.</th>
+    <th>Status</th>
+  </tr>
+</thead>
+<tbody>
+  <% @claims.each do |cla| %>
+    <tr>
+      <td><%= cla.product_type %></td>
+      <td><%= cla.number %></td>
+      <td><%= cla.reference_number %></td>
+      <td><%= cla.loss_date.strftime("%b %d, %Y") %></td>
+      <td><%= cla.cause %></td>
+      <td><%= cla.gross_amount %></td>
+      <td><%= cla.status %></td>
+    </tr>
+  <% end %>
+</tbody>

@@ -1,0 +1,24 @@
+<%= javascript_include_tag "http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js" %>
+<%= stylesheet_link_tag "http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/css/jquery.dataTables.css" %>
+
+<ul class="nav nav-tabs">
+  <li class="<%= 'active' unless @paid %>">
+    <%= link_to("Pending Claims", claims_path()) %>
+  </li>
+  <li class="<%= 'active' if @paid %>">
+    <%= link_to("Paid Claims", claims_path(:paid => true)) %>
+  </li>
+</ul>
+
+
+<table id="claims">
+  <%= render :partial => "claims/claims"%>
+</table>
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    jQuery('#claims').dataTable({
+       "aaSorting": []
+    });
+} );
+</script>

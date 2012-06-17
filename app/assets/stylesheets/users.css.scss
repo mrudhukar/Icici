@@ -1,3 +1,124 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bourbon";
+
+.well{
+  &.small{
+    padding: 10px;
+  }
+
+  .header{
+    color: #A70303;
+    a{
+      color: #A70303;
+    }
+  }
+
+  &.icici{
+    background-color: #FBF4BD;
+  }
+}
+
+.modal form{
+  margin-bottom: 0;
+  .modal-footer.form-actions{
+    text-align: left;
+  }
+}
+
+form.well{
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  .form-actions{
+    margin-bottom: 0;
+  }
+}
+
+.empty_content{
+  text-align: center;
+}
+
+.has-below {
+  margin-bottom: 5px;
+}
+
+.has-below-1 {
+  margin-bottom: 10px;
+}
+
+.has-below-2 {
+  margin-bottom: 15px;
+}
+
+.has-above {
+  margin-top: 5px;
+}
+
+.has-above-1 {
+  margin-top: 10px;
+}
+
+.has-above-2 {
+  margin-top: 15px;
+}
+
+.white-well{
+  background-color: #FFF;
+}
+
+.dim{
+  color: #666;
+}
+
+.dimmer{
+  color: #999;
+}
+
+.has-right{
+  margin-right: 5px;
+}
+
+.has-left{
+  margin-left: 5px;
+}
+
+.merge-top {
+  margin-top: 0px !important;
+  border-top: 0px !important;
+  @include border-top-radius(0);
+}
+
+.merge-bottom {
+  margin-bottom: 0px !important;
+  border-bottom: 0px !important;
+  @include border-bottom-radius(0);
+}
+
+.attach-top {
+  margin-top: 0px !important;
+  @include border-top-radius(0);
+}
+
+.attach-bottom {
+  margin-bottom: 0px !important;
+  @include border-bottom-radius(0);
+}
+
+footer{
+  margin-top: 20px;
+}
+
+table.dataTable tr.odd {
+background-color: #EEE !important
+}
+
+table.dataTable tr.even {
+background-color: #FFF !important;
+}
+
+#policies_length, #claims_length{
+  padding: 4px 0;
+  select{
+  width: 50px;
+}
+
+} 
