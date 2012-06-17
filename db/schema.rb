@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(:version => 20120616153544) do
     t.string   "insurer",             :default => "ICICI Lombard"
     t.integer  "premium"
     t.date     "start"
-    t.date     "end"
+    t.date     "end_date"
     t.boolean  "intimation_required", :default => true
     t.datetime "created_at",                                       :null => false
     t.datetime "updated_at",                                       :null => false
