@@ -12,7 +12,7 @@ namespace :generate do
           :insurer => row[2],
           :premium => row[3],
           :start => row[4],
-          :end => row[5],
+          :end_date => row[5],
           :intimation_required => (row[6] == "Y") ? true : false
         )
         if policy.valid?

@@ -16,9 +16,9 @@ class Policy < ActiveRecord::Base
   belongs_to :user
   has_many :claims, :dependent => :destroy
 
-  validates :user, :number, :insurer, :premium, :start, :end, :presence => true
+  validates :user, :number, :insurer, :premium, :start, :end_date, :presence => true
   validates :product_type, :inclusion => {:in => Product.all}
   validates :number, :uniqueness => true
 
-  scope :pending_renewal, lambda {where(:end => Date.today..2.months.from_now.to_date)}
+  scope :pending_renewal, lambda {where(:end_date => Date.today..2.months.from_now.to_date)}
 end

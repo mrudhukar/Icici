@@ -36,7 +36,7 @@ class UsersController < ApplicationController
       return
     end
 
-    @policies = current_user.policies.pending_renewal.order("end")
+    @policies = current_user.policies.pending_renewal.order("end_date")
     @claims = current_user.claims.not_paid.where("loss_date < ?", 6.months.ago).order("loss_date")
 
   end

@@ -18,7 +18,7 @@
       <td><%= pol.insurer %></td>
       <td><%= pol.premium %></td>
       <td><%= pol.start.strftime("%b %d, %Y") %></td>
-      <td><%= pol.end.strftime("%b %d, %Y") %></td>
+      <td><%= pol.end_date.strftime("%b %d, %Y") %></td>
       <td><%= pol.intimation_required? ? "Yes" : "No" %></td>
       <td><%= link_to("View", "/policy.pdf", :target => "_blank") %></td>
     </tr>
