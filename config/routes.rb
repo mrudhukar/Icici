@@ -11,7 +11,11 @@ Icici::Application.routes.draw do
     end
   end
   resources :user_sessions
-  resources :policies
+  resources :policies do
+    collection do 
+      get "health"
+    end
+  end
   resources :claims
 
 

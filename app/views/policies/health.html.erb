@@ -1,0 +1,15 @@
+<% if @type == "1" %>
+  <%= image_tag("EnrolmentDetails.png")%>
+<% elsif @type == "2" %>
+  <%= image_tag("icard.png")%>
+<% elsif @type == "3" %>
+  <%= image_tag("cstatus.png")%>
+<% elsif @type == "4" %>
+<%= image_tag("cint1.png", :height => 100)%>
+<br/>
+<br/>
+<%= image_tag("cint2.png")%>
+<% elsif @type == "5" %>
+<%= image_tag("misreport.png")%>
+<% end %>
+

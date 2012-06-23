@@ -4,4 +4,9 @@ class PoliciesController < ApplicationController
     @policies = current_user.policies.order("end_date")    
     @filter = params[:filter].presence
   end
+
+  def health
+    @tab = TabConstants::HEALTH
+    @type = params[:type]
+  end
 end

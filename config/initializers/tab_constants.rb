@@ -4,4 +4,5 @@ module TabConstants
   HOME = "Home"
   POLICIES = "Policies"
   CLAIMS = "Claims"
+  HEALTH = "Health"
 end

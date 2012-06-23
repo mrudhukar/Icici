@@ -1,7 +1,7 @@
 <div class="">
   <div class="well small merge-bottom">
-    <%= link_to("View all", policies_path, :class => "pull-right")%>
-    <h4 class="header">Policies up for renewal in two months</h4>
+    <%= link_to(("<i class='icon-plus-sign icon-white'></i>" + " Add policy").html_safe, "", :class => "pull-right btn btn-warning")%>
+    <h4 class="header pull-left">Policies up for renewal in two months &nbsp;</h4> <%= link_to(" - View all", policies_path, :class => "pull-left")%>
   </div>
 
   <table class="table table-striped table-bordered  attach-top">
@@ -11,8 +11,7 @@
 
 <div class="">
   <div class="well small merge-bottom">
-    <%= link_to("View all", claims_path, :class => "pull-right")%>
-    <h4 class="header">Pending claims for more than 6 months</h4>
+    <h4 class="header pull-left">Pending claims for more than 6 months &nbsp;</h4> <%= link_to(" - View all", claims_path, :class => "pull-left")%>
   </div>
 
   <table class="table table-striped table-bordered attach-top">

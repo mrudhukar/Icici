@@ -6,7 +6,7 @@
     <%= link_to("Pending Claims", claims_path()) %>
   </li>
   <li class="<%= 'active' if @paid %>">
-    <%= link_to("Paid Claims", claims_path(:paid => true)) %>
+    <%= link_to("Paid Claims", claims_path(:paid => true, :filter => @filter)) %>
   </li>
 </ul>
 
