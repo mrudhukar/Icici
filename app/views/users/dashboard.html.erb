@@ -16,12 +16,6 @@
   </div>
 
   <table class="table table-striped table-bordered attach-top">
-    <%= render :partial => "claims/claims"%>
+    <%= render :partial => "claims/claims", :locals => {:open => true}%>
   </table>
 </div>
-
-<style>
-table.table{
-font-size: 0.9em;
-}
-</style>

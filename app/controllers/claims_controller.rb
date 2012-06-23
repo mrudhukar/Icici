@@ -5,5 +5,6 @@ class ClaimsController < ApplicationController
     @paid = (params[:paid] == "true")
     @claims = @paid ? current_user.claims.paid : current_user.claims.not_paid
     @claims = @claims.order("loss_date")
+    @filter = params[:filter].presence
   end
 end

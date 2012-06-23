@@ -1,12 +1,15 @@
 <thead>
   <tr>
     <th>Product</th>
-    <th>Number</th>
+    <th>Policy Number</th>
     <th>Ref. Number</th>
-    <th>Loss Date</th>
+    <th style="width: 60px;">Loss Date</th>
     <th>Cause of Loss</th>
+    <% unless open %>
     <th>Gross Claim Amt.</th>
+    <% else %>
     <th>Status</th>
+    <% end %>
   </tr>
 </thead>
 <tbody>
@@ -15,10 +18,13 @@
       <td><%= cla.product_type %></td>
       <td><%= cla.number %></td>
       <td><%= cla.reference_number %></td>
-      <td><%= cla.loss_date.strftime("%b %d, %Y") %></td>
+      <td><%= cla.loss_date.strftime("%b %d, %y") %></td>
       <td><%= cla.cause %></td>
-      <td><%= cla.gross_amount %></td>
+      <% unless open %>
+      <td style="text-align:center;"><%= cla.gross_amount %></td>
+      <% else %>
       <td><%= cla.status %></td>
+      <% end %>
     </tr>
   <% end %>
 </tbody>

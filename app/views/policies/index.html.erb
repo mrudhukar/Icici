@@ -7,8 +7,11 @@
 
 <script type="text/javascript">
 jQuery(document).ready(function() {
-    jQuery('#policies').dataTable({
+    var pTable = jQuery('#policies').dataTable({
        "aaSorting": []
     });
+    <% if @filter %>
+    pTable.fnFilter("<%= @filter %>");
+    <% end %>
 } );
 </script>

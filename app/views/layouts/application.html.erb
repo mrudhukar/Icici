@@ -18,16 +18,17 @@
 
   </head>
   <body>
-    <iframe src="https://www.icicilombard.com/" style="width:100%;height:80px;border:none;overflow:hidden;" scrolling="no"></iframe>
+    <%= image_tag("ICICI.png") %>
     <%= render :partial => "common/top_navigation" %>
 
     <div class="container">
       <div class="content">
         <div class="row">
            <div class="span9">
+            <h3 class="has-below-2">My Briefcase</h3>
               <%= yield %>
             </div>
-            <div class="span3">
+            <div class="span3 sidebar">
               <%= render :partial => "common/side_bar"%>
             </div>
         </div>

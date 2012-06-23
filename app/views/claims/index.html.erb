@@ -12,13 +12,16 @@
 
 
 <table id="claims">
-  <%= render :partial => "claims/claims"%>
+  <%= render :partial => "claims/claims", :locals => {:open => !@paid} %>
 </table>
 
 <script type="text/javascript">
 jQuery(document).ready(function() {
-    jQuery('#claims').dataTable({
+    var cTable = jQuery('#claims').dataTable({
        "aaSorting": []
     });
+    <% if @filter %>
+    cTable.fnFilter("<%= @filter %>");
+    <% end %>
 } );
 </script>

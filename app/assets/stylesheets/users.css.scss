@@ -118,7 +118,14 @@ background-color: #FFF !important;
 #policies_length, #claims_length{
   padding: 4px 0;
   select{
-  width: 50px;
+    width: 50px;
+  }
+} 
+
+table.table, table.dataTable{
+  font-size: 0.9em;
 }
 
-} 
+table.dataTable td{
+  padding: 3px 5px !important;
+}
